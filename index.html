@@ -6,6 +6,29 @@
     <title>Quality Multas - Especialista em CNH</title>
     <!-- Link para o CSS -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Google Tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'SUA-TAG-GOOGLE');
+</script>
+
+<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net');
+  fbq('init', 'SEU-PIXEL-ID');
+  fbq('track', 'PageView');
+</script>
+
 </head>
 <body>
 
@@ -135,18 +158,18 @@
                     </div>
                     <div class="owner-text">
                         <h3>Fale direto <br><span class="text-amarelo italic">Comigo!</span></h3>
-                        <p>Consultoria Humanizada</p>
+                      
                     </div>
                 </div>
                 
                 <div class="social-links">
                     <a href="https://wa.me/5531997800098" target="_blank" class="social-item">
                         <img src="./img/whatsapp.png" alt="WhatsApp">
-                        <span>WhatsApp</span>
+                       
                     </a>
                     <a href="https://www.instagram.com/qualitymultas/" target="_blank" class="social-item">
                         <img src="./img/instagram.png" alt="Instagram">
-                        <span>Instagram</span>
+                       
                     </a>
                 </div>
             </div>
@@ -186,6 +209,32 @@
             // Redirecionamento forçado na mesma aba (Mais seguro)
             window.location.href = url;
         }
+        function enviarParaWhatsApp() {
+    const nome = document.getElementById('nome').value;
+    const whats = document.getElementById('whatsapp_input').value;
+    const servico = document.getElementById('servico_select').value;
+    
+    if (!nome || !whats || !servico) {
+        alert("Preencha tudo para a análise gratuita, mestre!");
+        return;
+    }
+
+    // --- RASTREAMENTO MASTER (Google e Facebook) ---
+    // Avisa o Google Ads que um Lead foi gerado
+    if (typeof gtag === 'function') {
+        gtag('event', 'conversion', { 'send_to': 'SUA-TAG-GOOGLE/CODIGO-CONVERSAO' });
+    }
+    // Avisa o Facebook que um contato foi feito
+    if (typeof fbq === 'function') {
+        fbq('track', 'Lead', { content_name: servico, value: 0.00, currency: 'BRL' });
+    }
+
+    // Mensagem e Redirecionamento (MANTIDOS)
+    const meuNumero = "5531997800098";
+    const msg = `*LEAD QUALITY*\n*Nome:* ${nome}\n*Whats:* ${whats}\n*Serviço:* ${servico}`;
+    window.location.href = `https://api.whatsapp.com{meuNumero}&text=${encodeURIComponent(msg)}`;
+}
+
     </script>
 </body>
 </html>

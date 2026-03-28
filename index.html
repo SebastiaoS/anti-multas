@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quality Multas - Especialista em CNH</title>
+    <!-- Link para o CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- BOTÃO FLUTUANTE REDONDO -->
+    <a href="https://wa.me/5531997800098" target="_blank" class="whatsapp-float">
+        <img src="./img/whatsapp.png" alt="WhatsApp">
+    </a>
+
+    <!-- HEADER -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <span class="text-prata">Quality</span><span class="text-amarelo">Multas</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="tagline">Defesa Premium de CNH</span>
+                <h1>Sua CNH é sua <br><span class="text-prata italic">Liberdade.</span></h1>
+                <p>A <strong>Quality Multas</strong> protege seu direito de dirigir com técnica jurídica avançada.</p>
+                <a href="#contato" class="btn-yellow">Recorrer Agora</a>
+            </div>
+            <div class="hero-image">
+                <img src="./img/pena2.png" alt="Especialista">
+            </div>
+        </div>
+    </section>
+<!-- SEÇÃO DE DEPOIMENTOS (PROVA SOCIAL) -->
+<section class="testimonials-section">
+    <!-- Parte 1: Foto Lateral (Agora um pouco mais estreita) -->
+    <div class="testimonial-hero-side">
+        <img src="./img/pena3.png" alt="Motoristas Satisfeitos">
+      
+    </div>
+
+    <!-- Parte 2: Bloco de Depoimentos (Coluna 1) -->
+    <div class="testimonial-column">
+        <!-- Depoimento 1 -->
+        <div class="mini-card">
+            <div class="stars">★★★★★</div>
+            <p>"Anularam minha suspensão em tempo recorde. Profissionais!"</p>
+            <span class="client-name">Ricardo S. <i class="verify">✓</i></span>
+        </div>
+        <!-- Depoimento 2 -->
+        <div class="mini-card">
+            <div class="stars">★★★★★</div>
+            <p>"Evitaram que eu perdesse meu emprego de motorista. Gratidão!"</p>
+            <span class="client-name">Marcos T. <i class="verify">✓</i></span>
+        </div>
+        <!-- Depoimento 3 -->
+        <div class="mini-card">
+            <div class="stars">★★★★☆</div>
+            <p>"Atendimento nota 10 e recurso deferido na primeira instância."</p>
+            <span class="client-name">Ana Paula L. <i class="verify">✓</i></span>
+        </div>
+         <!-- Depoimento  -->
+        <div class="mini-card">
+            <div class="stars">★★★★☆</div>
+            <p>"Por pouco já estava perdendo minha carteira! Me salvaram."</p>
+            <span class="client-name">Ana Paula L. <i class="verify">✓</i></span>
+        </div>
+    </div>
+
+    <!-- Parte 3: Bloco de Depoimentos (Coluna 2) -->
+    <div class="testimonial-column">
+        <!-- Depoimento 4 -->
+        <div class="mini-card">
+            <div class="stars">★★★★★</div>
+            <p>"Minha multa de Lei Seca foi anulada por erro no bafômetro. Incrível!"</p>
+            <span class="client-name">Fernanda O. <i class="verify">✓</i></span>
+        </div>
+        <!-- Depoimento 5 -->
+        <div class="mini-card">
+            <div class="stars">★★★★★</div>
+            <p>"Honestidade desde a análise gratuita. Recomendo a todos."</p>
+            <span class="client-name">João Pedro <i class="verify">✓</i></span>
+        </div>
+        <!-- Depoimento 6 -->
+        <div class="mini-card">
+            <div class="stars">★★★★☆</div>
+            <p>"Processo transparente e resultado positivo. Valeu cada centavo."</p>
+            <span class="client-name">Cláudia M. <i class="verify">✓</i></span>
+        </div>   
+         <div class="mini-card">
+            <div class="stars">★★★★☆</div>
+            <p>"Consegui economizar muito.Compensa o valor investido!"</p>
+            <span class="client-name">Cláudia M. <i class="verify">✓</i></span>
+        </div>
+    </div>
+</section>
+
+    <!-- SEÇÃO DE CONVERSÃO -->
+    <section id="contato" class="conversion-section">
+        <div class="container conversion-grid">
+            
+            <!-- FORMULÁRIO -->
+            <div class="form-card">
+                <h3>Solicitar <span class="text-amarelo">Análise</span></h3>
+                <p>Análise técnica em menos de 2 horas.</p>
+                
+                <div class="form-group">
+                    <input type="text" id="nome" placeholder="Seu Nome Completo">
+                    <input type="tel" id="tel" placeholder="Seu WhatsApp (com DDD)">
+                    <select id="serv">
+                        <option value="">Qual o seu problema?</option>
+                        <option value="Lei Seca">Lei Seca / Bafômetro</option>
+                        <option value="Suspensão">Suspensão de CNH</option>
+                        <option value="Multa Grave">Recurso de Multa</option>
+                    </select>
+                    <!-- FUNÇÃO CHAMADA DIRETAMENTE NO ONCLICK -->
+                    <button type="button" onclick="dispararWhatsapp()" class="btn-submit">
+                        ENVIAR PARA O ESPECIALISTA
+                    </button>
+                </div>
+            </div>
+
+            <!-- HUMANIZAÇÃO (PROPRIETÁRIO) -->
+            <div class="owner-info">
+                <div class="owner-header">
+                    <div class="owner-photo-wrapper">
+                        <img src="./img/pena1.png" alt="Proprietário" class="owner-photo">
+                        <span class="status-online"></span>
+                    </div>
+                    <div class="owner-text">
+                        <h3>Fale direto <br><span class="text-amarelo italic">Comigo!</span></h3>
+                        <p>Consultoria Humanizada</p>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://wa.me/5531997800098" target="_blank" class="social-item">
+                        <img src="./img/whatsapp.png" alt="WhatsApp">
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="https://www.instagram.com/qualitymultas/" target="_blank" class="social-item">
+                        <img src="./img/instagram.png" alt="Instagram">
+                        <span>Instagram</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="logo">
+            <span class="text-prata text-xl">Quality</span><span class="text-amarelo">Multas</span>
+        </div>
+        <p>© 2026 Quality Multas. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- SCRIPT INFALÍVEL -->
+    <script>
+        function dispararWhatsapp() {
+            // Pegando os valores
+            var nome = document.getElementById('nome').value;
+            var tel = document.getElementById('tel').value;
+            var serv = document.getElementById('serv').value;
+            var meuNumero = "5531997800098"; // Substitua pelo seu número de WhatsApp (com DDD)
+
+            // Validação
+            if (nome === "" || tel === "" || serv === "") {
+                alert("Por favor, preencha todos os campos!");
+                return;
+            }
+
+            // Montando a URL (Encode direto para evitar erros)
+            var mensagem = "*Fala chefe! Visitei o seu site e preciso da sua ajuda!!- QUALITY MULTAS*%0A%0A" +
+                           "*Nome:* " + nome + "%0A" +
+                           "*WhatsApp:* " + tel + "%0A" +
+                           "*Serviço:* " + serv;
+
+            var url = "https://api.whatsapp.com/send?phone=" + meuNumero + "&text=" + mensagem;
+
+            // Redirecionamento forçado na mesma aba (Mais seguro)
+            window.location.href = url;
+        }
+    </script>
+</body>
+</html>

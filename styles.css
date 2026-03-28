@@ -1,0 +1,215 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: sans-serif; background-color: #f8fafc; color: #0f172a; line-height: 1.6; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+/* CORES */
+.text-prata {
+    background: linear-gradient(to bottom, #cfd8dc, #b0bec5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+.text-amarelo { color: #FACC15; }
+.italic { font-style: italic; }
+
+/* NAVBAR */
+.navbar { background-color: #020617; padding: 20px 0; border-bottom: 2px solid #1e293b; }
+.logo { font-size: 24px; font-weight: 900; text-transform: uppercase; }
+
+/* HERO */
+.hero { background-color: #020617; color: white; padding: 60px 0; border-bottom: 5px solid #FACC15; }
+.hero-content { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.hero-text { flex: 1; min-width: 300px; }
+.hero-text h1 { font-size: 50px; font-weight: 900; margin: 15px 0; line-height: 1.1; }
+.tagline { color: #FACC15; font-weight: bold; text-transform: uppercase; font-size: 13px; }
+/* AJUSTE DA IMAGEM DO HERO COM BORDAS ARREDONDADAS */
+.hero-image img {
+    max-width: 60%;
+    /* O SEGREDO ESTÁ AQUI: */
+    border-radius: 30px; 
+    
+    /* Adicionei uma sombra suave para dar profundidade e destacar a foto */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    
+    /* Garante que o arredondamento funcione mesmo se a foto for cortada */
+    display: block;
+    object-fit: cover;
+    
+    transition: transform 0.3s ease;
+}
+
+/* Efeito sutil ao passar o mouse para dar vida ao site */
+.hero-image img:hover {
+    transform: scale(1.02);
+}
+
+.hero-image img { max-width: 60%; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5)); }
+.btn-yellow { display: inline-block; background-color: #FACC15; color: #020617; padding: 15px 30px; border-radius: 8px; font-weight: 900; text-decoration: none; text-transform: uppercase; margin-top: 20px; }
+/* SEÇÃO DE DEPOIMENTOS */
+/* SEÇÃO DE DEPOIMENTOS 6 CARDS */
+.testimonials-section {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #ffffff;
+    align-items: stretch;
+    border-bottom: 5px solid #FACC15;
+}
+
+/* Ajuste da Foto Lateral (Menor) */
+.testimonial-hero-side {
+    flex: 0.7; /* Foto menor que os blocos de texto */
+    min-width: 250px;
+    height: 60vh; /* Altura maior para acompanhar os 3 depoimentos verticais */
+    position: relative;
+}
+
+.testimonial-hero-side img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Colunas de Depoimentos */
+.testimonial-column {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px;
+    background-color: #020617;
+    border-left: 1px solid #f1f5f9;
+}
+
+/* Estilo dos Mini Cards */
+.mini-card {
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 15px;
+    border-left: 4px solid #FACC15; /* Detalhe amarelo na lateral */
+    transition: 0.3s;
+}
+
+.mini-card:hover {
+    transform: translateX(5px);
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.mini-card .stars {
+    color: #FACC15;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.mini-card p {
+    font-size: 14px;
+    color: #334155;
+    font-style: italic;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+.mini-card .client-name {
+    font-weight: 900;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.verify {
+    color: #3b82f6; /* Azul Verificado */
+    font-style: normal;
+}
+
+/* Ajuste Mobile */
+@media (max-width: 1024px) {
+    .testimonials-section { flex-direction: column; }
+    .testimonial-hero-side { height: 30vh; flex: 1; }
+}
+
+
+/* Ajuste para Celular */
+@media (max-width: 768px) {
+    .testimonials-section {
+        flex-direction: column;
+    }
+    .testimonial-hero {
+        height: 30vh; /* Mantém 30vh no mobile se desejar, ou pode aumentar */
+    }
+}
+
+/* CONVERSÃO */
+.conversion-section { padding: 80px 0; }
+.conversion-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+
+@media (max-width: 768px) {
+    .conversion-grid { grid-template-columns: 1fr; }
+    .hero-image { display: none; }
+}
+
+/* FORMULÁRIO *//* CARD DO FORMULÁRIO COM BORDA FINA DOURADA */
+.form-card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px; /* Arredondamento suave para combinar com os mini-cards */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    
+    /* BORDA FINA DOURADA (Mesmo estilo do contorno da section) */
+    border: 1px solid #FACC15; 
+    
+    transition: 0.3s ease;
+}
+
+.form-card:hover {
+    /* Efeito sutil ao passar o mouse */
+    box-shadow: 0 15px 35px rgba(250, 204, 21, 0.1);
+    transform: translateY(-3px);
+}
+
+/* Ajuste no título para não brigar com a borda */
+.form-card h3 {
+    font-size: 26px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #020617; /* Texto escuro para autoridade */
+}
+
+/* Campos de entrada com foco dourado */
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 15px;
+    margin-top: 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background-color: #f8fafc;
+    outline: none;
+    transition: 0.2s;
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: #FACC15; /* O dourado/amarelo aparece no foco */
+    background-color: #ffffff;
+}
+
+
+.btn-submit { width: 100%; background-color: #020617; color: white; padding: 18px; border: none; border-radius: 10px; font-weight: 900; margin-top: 20px; cursor: pointer; }
+
+/* DONO */
+.owner-header { display: flex; align-items: center; gap: 20px; margin-bottom: 30px; justify-content: center; }
+.owner-photo-wrapper { position: relative; width: 120px; height: 120px; }
+.owner-photo { width: 100%; height: 100%; border-radius: 50%; border: 3px solid #FACC15; object-fit: cover; }
+.status-online { position: absolute; bottom: 5px; right: 5px; width: 20px; height: 20px; background: #22c55e; border: 3px solid white; border-radius: 50%; }
+.social-links { display: flex; justify-content: center; gap: 40px; }
+.social-item { text-decoration: none; text-align: center; }
+.social-item img { width: 60px; display: block; margin: 0 auto 5px; }
+.social-item span { font-size: 10px; font-weight: bold; color: #94a3b8; text-transform: uppercase; }
+
+/* WHATSAPP FLOAT */
+.whatsapp-float { position: fixed; bottom: 20px; right: 20px; background: #22c55e; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid white; box-shadow: 0 5px 15px rgba(0,0,0,0.2); z-index: 1000; }
+.whatsapp-float img { width: 35px; }
+
+.footer { background: #020617; padding: 40px; text-align: center; color: #475569; font-size: 12px; }
